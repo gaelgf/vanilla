@@ -1,3 +1,5 @@
+import debounce from "../../utils/debounce";
+
 const paymentFormElement = document.querySelector('.paymentForm');
 
 const initEventListeners = () => {
@@ -75,13 +77,23 @@ const onInputChange = (event) => {
     }
 
     if (input.id === 'cardNumber') {
-        const cardType = getCardType(input.value);
-        document.querySelector('.cardType').textContent = cardType;
+        debounce(updateCardType, 300);
     }
 };
 
-const getCardType = (cardNumber) => {
+const getCardType = () => {
+    const cardNumber = document.getElementById('cardNumber').value;
+
+    if (!cardNumber) {
+        return '';
+    }
+
     return 'visa';
+};
+
+const updateCardType = () => {
+    const cardType = getCardType(cardNumber);
+    document.querySelector('.cardType').textContent = cardType;
 };
 
 export {
