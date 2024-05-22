@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <h2>Formulaire de Paiement</h2>
+
+  <div class="offer-infos"></div>
+
+  <form class="paymentForm">
+    <div class="form-group">
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="name">
+      <div id="nameError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="cardNumber">Numéro de carte</label>
+      <input type="text" id="cardNumber" name="cardNumber">
+      cardType: <span class="cardType"></span>
+      <div id="cardNumberError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="expiryDate">Date d'expiration (MM/AA)</label>
+      <input type="text" id="expiryDate" name="expiryDate">
+      <div id="expiryDateError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv">
+      <div id="cvvError" class="error"></div>
+    </div>
+    <div class="form-group">
+      <button type="submit">Payer</button>
+    </div>
+  </form>
+
+  <script type="module" src="/components/offerInfos/index.js"></script>
+  <script type="module" src="/components/paymentForm/index.js"></script>
+</body>
+
+</html>

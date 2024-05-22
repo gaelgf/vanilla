@@ -1,0 +1,30 @@
+.offer-infos {
+    background-color: #f5faff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    font-size: 16px;
+
+    .title {
+        color: #007bff;
+        font-weight: bold;
+    }
+    .subtitle {
+        font-size: 14px;
+        color: #6c757d;
+    }
+    .old-price {
+        text-decoration: line-through;
+        color: #000;
+    }
+    .new-price {
+        color: #000;
+        font-weight: bold;
+    }
+    .description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #6c757d;
+    }
+}
